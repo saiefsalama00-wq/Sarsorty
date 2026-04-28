@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Sarsortyy ❤️</title>
+    <title>For Sarsorty ❤️</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            /* الخلفية قلوب بدل السواد */
-            background: radial-gradient(circle, #ff2e63 10%, transparent 11%), 
-                        radial-gradient(circle, #ff2e63 10%, transparent 11%) black;
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
+            /* كود خلفية الصورة الشخصية */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: black; /* لون احتياطي لو الصورة محملتش */
             color: white;
             text-align: center;
             overflow-x: hidden;
         }
+
         #login {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: black;
+            background: rgba(0, 0, 0, 0.85); /* تظليل غامق لشاشة الدخول */
             display: flex; flex-direction: column;
             justify-content: center; align-items: center;
             z-index: 100;
         }
+
         input { padding: 12px; border-radius: 10px; border: none; width: 200px; text-align: center; font-size: 16px; }
         button { padding: 10px 30px; margin-top: 15px; background: #ff2e63; border: none; color: white; border-radius: 10px; cursor: pointer; font-size: 18px; font-weight: bold; }
-        .hidden { display: none; }
-        .content { padding: 20px; animation: fadeIn 2s; }
-        img { width: 90%; max-width: 300px; border-radius: 20px; margin: 15px 0; box-shadow: 0 0 15px rgba(255,46,99,0.5); }
+        
+        .hidden { display: none !important; }
+
+        .content { 
+            padding: 20px; 
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.4); /* تظليل خفيف فوق الصورة عشان الكلام يبان */
+            animation: fadeIn 2s; 
+        }
+
+        img.personal-photos { width: 90%; max-width: 300px; border-radius: 20px; margin: 15px 0; box-shadow: 0 0 15px rgba(255,46,99,0.5); }
+        
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .heart { position: fixed; color: #ff2e63; animation: float 5s linear infinite; z-index: -1; font-size: 20px; }
-        @keyframes float { 0% { transform: translateY(110vh) rotate(0deg); } 100% { transform: translateY(-10vh) rotate(360deg); } }
+
+        .heart { position: fixed; color: #ff2e63; animation: float 5s linear infinite; z-index: 50; font-size: 20px; pointer-events: none; }
+        @keyframes float { 0% { transform: translateY(110vh); } 100% { transform: translateY(-10vh); } }
+
         .text { white-space: pre-line; font-size: 1.2rem; line-height: 1.6; background: rgba(0,0,0,0.6); padding: 15px; border-radius: 15px; margin: 20px; }
     </style>
 </head>
@@ -45,59 +61,59 @@
     </div>
 
     <div id="main" class="hidden content">
-        <h2>💖 بحبك يا سرسورتي 💖</h2>
+        <h2 style="margin-top:40px;">💖 بحبك يا سرسورتي 💖</h2>
         <h3 id="days"></h3>
         
         <p class="text">
-            كنت عاوز اقولك بس ان انا بحبكك اووي وبحبك اكثر من نفسي كمان وبدمنك حرفياا ومهما قولت بحبك قد اي من كلام مش هيوصف ربع حبي ليكي انتي بجد اقرب ليا من نفسي وبجد اتمني تفضلي معايا طول العمر ومتبعديش عني ابدا بس مينكرش اني كنت زعلان منك بس خلاص اتصالحت وكنت خايف مووووتتت نتخانق بس الحمد لله كان يوم زي العسل وان شاء الله هيفضل زي العسل لحد بليل عشان انتي زي العسل اصلا مقدرش ازعل منك ابداا عشان انتي حته مني وبجد بنثبالي حاجه كبيره اووي اوووييي  عندي وبجد بحبك اووي اها بتتقمصي بسرعه وبنتصالح بصعوبه بس بعشقك برضووو😒♥️ انتي اصلا ولله انتي عندي بالدنيا ومافيها وبجد انتي متتعوضيش ولو بمليون برضو ميعوضوش وجودككك متتعوضيش وبجد انتي حته مني وانضف حد دخل حياتي بجد بحبك وبعشقككك وبموت فيكي ببق مبسوط موووت وانا بين ايدك بجدد يبق ف دنيا تانيه وانا معاكي بحبكك مووتت وبعشقك وربنا يخليكي ليا ياست البنات يا احلي بطايه ف الكون كلووو 😍😍😍😍😍♥️♥️♥️♥️♥️🫂🫂🫂
+            كنت عاوز اقولك بس ان انا بحبكك اووي وبحبك أكثر من نفسي كمان وبدمنك حرفياا... ❤️
         </p>
 
-        <img src="photo1.jpg.png" alt="Photo 1">
-        <img src="photo2.jpg.png" alt="Photo 2">
-        <img src="photo3.jpg.png" alt="Photo 3">
+        <img src="photo1.jpg.png" class="personal-photos">
+        <img src="photo2.jpg.png" class="personal-photos">
+        <img src="photo3.jpg.png" class="personal-photos">
 
-        <div style="margin-top: 20px;">
+        <div style="margin: 30px 0;">
             <iframe id="spotify-player" style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/2S6fP7I48UqG9U4Yp5z8fS?utm_source=generator&autoplay=1" 
+                src="https://open.spotify.com/embed/track/1yT9vLh1K3l07n2m1E8wYp?utm_source=generator" 
                 width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
     </div>
 
     <script>
         function check() {
-            let p = document.getElementById("pass").value;
-            if (p.toLowerCase() === "love") {
+            var p = document.getElementById("pass").value;
+            if (p.toLowerCase().trim() === "love") {
                 document.getElementById("login").classList.add("hidden");
                 document.getElementById("main").classList.remove("hidden");
                 
-                // تحديث الـ src عشان نفعّل الـ autoplay بعد الضغط
-                let player = document.getElementById("spotify-player");
+                // تشغيل الموسيقى
+                var player = document.getElementById("spotify-player");
                 player.src += "&autoplay=1";
                 
-                startHearts();
                 calculateDays();
+                startHearts();
             } else {
                 alert("الباسورد غلط يا روحي 😒");
             }
         }
 
         function calculateDays() {
-            let startDate = new Date("2024-06-17");
-            let today = new Date();
-            let diff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+            var start = new Date("2024-06-17");
+            var now = new Date();
+            var diff = Math.floor((now - start) / (1000 * 60 * 60 * 24));
             document.getElementById("days").innerHTML = "عدّى على حبنا " + diff + " يوم ❤️";
         }
 
         function startHearts() {
-            for (let i = 0; i < 40; i++) {
-                setTimeout(() => {
-                    let h = document.createElement("div");
+            for (var i = 0; i < 30; i++) {
+                setTimeout(function() {
+                    var h = document.createElement("div");
                     h.innerHTML = "❤️";
                     h.className = "heart";
                     h.style.left = Math.random() * 100 + "%";
                     h.style.animationDuration = (3 + Math.random() * 5) + "s";
                     document.body.appendChild(h);
-                }, i * 200);
+                }, i * 300);
             }
         }
     </script>
