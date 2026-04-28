@@ -65,7 +65,7 @@
         <h3 id="days"></h3>
         
         <p class="text">
-            كنت عاوز اقولك بس ان انا بحبكك اووي وبحبك أكثر من نفسي كمان وبدمنك حرفياا... ❤️
+كنت عاوز اقولك بس ان انا بحبكك اووي وبحبك اكثر من نفسي كمان وبدمنك حرفياا ومهما قولت بحبك قد اي من كلام مش هيوصف ربع حبي ليكي انتي بجد اقرب ليا من نفسي وبجد اتمني تفضلي معايا طول العمر ومتبعديش عني ابدا بس مينكرش اني كنت زعلان منك بس خلاص اتصالحت وكنت خايف مووووتتت نتخانق بس الحمد لله كان يوم زي العسل وان شاء الله هيفضل زي العسل لحد بليل عشان انتي زي العسل اصلا مقدرش ازعل منك ابداا عشان انتي حته مني وبجد بنثبالي حاجه كبيره اووي اوووييي  عندي وبجد بحبك اووي اها بتتقمصي بسرعه وبنتصالح بصعوبه بس بعشقك برضووو😒♥️ انتي اصلا ولله انتي عندي بالدنيا ومافيها وبجد انتي متتعوضيش ولو بمليون برضو ميعوضوش وجودككك متتعوضيش وبجد انتي حته مني وانضف حد دخل حياتي بجد بحبك وبعشقككك وبموت فيكي ببق مبسوط موووت وانا بين ايدك بجدد يبق ف دنيا تانيه وانا معاكي بحبكك مووتت وبعشقك وربنا يخليكي ليا ياست البنات يا احلي بطايه ف الكون كلووو 😍😍😍😍😍♥️♥️♥️♥️♥️🫂🫂🫂
         </p>
 
         <img src="photo1.jpg.png" class="personal-photos">
@@ -73,30 +73,25 @@
         <img src="photo3.jpg.png" class="personal-photos">
 
         <div style="margin: 30px 0;">
-            <iframe id="spotify-player" style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/1yT9vLh1K3l07n2m1E8wYp?utm_source=generator" 
-                width="100%" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-    </div>
+            <iframe style="border-radius:12px" 
+src="https://open.spotify.com/embed/track/1nOv83Igd6VoVoKNeGOGQJ" 
+width="300" height="80"></iframe>
 
-    <script>
-        function check() {
-            var p = document.getElementById("pass").value;
-            if (p.toLowerCase().trim() === "love") {
-                document.getElementById("login").classList.add("hidden");
-                document.getElementById("main").classList.remove("hidden");
-                
-                // تشغيل الموسيقى
-                var player = document.getElementById("spotify-player");
-                player.src += "&autoplay=1";
-                
-                calculateDays();
-                startHearts();
-            } else {
-                alert("الباسورد غلط يا روحي 😒");
-            }
-        }
+</div>
 
+<script>
+
+// باسورد
+function check(){
+let p=document.getElementById("pass").value;
+if(p==="love"){
+document.getElementById("login").style.display="none";
+document.getElementById("main").classList.remove("hidden");
+start();
+}else{
+alert("غلط 😒");
+}
+}
         function calculateDays() {
             var start = new Date("2024-06-17");
             var now = new Date();
